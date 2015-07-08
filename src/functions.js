@@ -18,7 +18,7 @@ function uselessFunction(){
 }
 //end your code
 
-var bar = 'not a function';
+var bar = function doubleArray();
 var barType = typeof bar;
 
 /**
@@ -32,7 +32,9 @@ var barType = typeof bar;
 */
 
 //your code here
-
+function doubleArray(){
+    
+}
 //end your code
 
 /**

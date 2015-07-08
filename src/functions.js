@@ -18,7 +18,7 @@ function uselessFunction(){
 }
 //end your code
 
-var bar = function doubleArray();
+var bar = function doubleArray(float[]);
 var barType = typeof bar;
 
 /**
@@ -32,8 +32,10 @@ var barType = typeof bar;
 */
 
 //your code here
-function doubleArray(){
-    
+function doubleArray(float[]){
+    for(var i = 0; i < float.length; i++){
+        float[i] = float[i]*2
+    }
 }
 //end your code
 

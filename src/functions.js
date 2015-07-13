@@ -13,12 +13,12 @@
 */
 
 //your code here
-function uselessFunction(){
-    return NULL;
+var uselessFunction = function(){
+    return null;
 }
 //end your code
 
-var bar = function doubleArray(float[]);
+var bar = 'not a function';
 var barType = typeof bar;
 
 /**
@@ -32,10 +32,13 @@ var barType = typeof bar;
 */
 
 //your code here
-function doubleArray(float[]){
-    for(var i = 0; i < float.length; i++){
-        float[i] = float[i]*2
+bar = function(doubleArray){
+    for(var i = 0; i < doubleArray.length; i++){
+        if(isNaN(doubleArray[i]))
+            return false;
+        doubleArray[i] = doubleArray[i]*2
     }
+    return true;
 }
 //end your code
 
@@ -72,5 +75,18 @@ function GitLog(hash, date, message) {
 */
 
 //your code here
-
+var parseGit = function(logArray){
+    var tempHash = '';
+    var tempDate = '';
+    var tempMess = '';
+    
+    for(var i = 1; i < 7; i++)
+        tempHash = tempHash + logArray[0].charAt(i);
+    for(var i = 9; i < 38; i++)
+        tempDate = tempDate + logArray[0].charAt(i);
+    for(var i = 41; i < (logArray[0].length)-1; i++)
+        tempMess = tempMess + logArray[0].charAt(i);
+    
+    return GitLog(tempHash, tempDate, tempMess);
+}
 //end your code
